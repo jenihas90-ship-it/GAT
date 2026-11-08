@@ -1,0 +1,23 @@
+{
+  "name": "cross-border-agency-management-system",
+  "version": "1.0.0",
+  "description": "International Recruitment Portal for Galo Travel Agency",
+  "scripts": {
+    "install:all": "npm --prefix backend install && npm --prefix frontend install",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build:frontend": "npm --prefix frontend run build"
+  },
+  "keywords": [
+    "recruitment",
+    "ethiopia",
+    "jordan",
+    "saudi-arabia",
+    "dubai",
+    "react",
+    "express",
+    "mongodb"
+  ],
+  "author": "Galo Travel Agency",
+  "license": "ISC"
+}

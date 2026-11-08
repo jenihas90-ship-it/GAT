@@ -1,0 +1,78 @@
+{
+  "nav": {
+    "agencyTitle": "Galo Travel Agency",
+    "subTitle": "Cross-Border Recruitment Portal",
+    "apply": "Candidate Application",
+    "admin": "Admin Portal",
+    "logout": "Log Out"
+  },
+  "hero": {
+    "badge": "Automated Cross-Border Recruitment",
+    "title": "Direct Recruitment to Dubai & Gulf Region",
+    "description": "Connecting skilled candidates from Ethiopia, Jordan, and Saudi Arabia directly to accredited employers in Dubai."
+  },
+  "form": {
+    "title": "Candidate Application Form",
+    "subtitle": "Please fill out your personal information and upload your valid passport.",
+    "fullName": "Full Legal Name",
+    "fullNamePlaceholder": "e.g., Abebe Bikila / Fatima Al-Zahrani",
+    "email": "Email Address",
+    "emailPlaceholder": "candidate@example.com",
+    "originCountry": "Country of Origin / Residence",
+    "selectCountry": "Select country of origin",
+    "ethiopia": "Ethiopia",
+    "jordan": "Jordan",
+    "saudiArabia": "Saudi Arabia",
+    "spokenLanguages": "Spoken Languages",
+    "spokenLanguagesHint": "Select all languages you speak proficiently",
+    "passportFile": "Passport Document (PDF, JPG, PNG)",
+    "passportFileHint": "Maximum file size 5MB. Must be clear and legible.",
+    "dragDrop": "Click or drag & drop passport document here",
+    "fileSelected": "Selected file",
+    "submit": "Submit Application",
+    "submitting": "Uploading & Submitting...",
+    "successTitle": "Application Submitted Successfully!",
+    "successMessage": "Your profile and passport have been encrypted and sent to our Dubai recruitment pipeline. We will notify you via email once reviewed.",
+    "submitAnother": "Submit Another Application"
+  },
+  "languages": {
+    "afaanOromo": "Afaan Oromo",
+    "amharic": "Amharic",
+    "english": "English",
+    "arabic": "Arabic"
+  },
+  "statuses": {
+    "Pending": "Pending",
+    "Screened": "Screened",
+    "Approved": "Approved",
+    "Visa Processing": "Visa Processing",
+    "Placed": "Placed"
+  },
+  "admin": {
+    "loginTitle": "Agency Admin Access",
+    "loginSubtitle": "Sign in to manage candidate pipelines and review documents",
+    "username": "Username / Email",
+    "password": "Password",
+    "signIn": "Sign In",
+    "signingIn": "Authenticating...",
+    "dashboardTitle": "Recruitment Operations Dashboard",
+    "dashboardSubtitle": "Filter, screen, and approve international candidates",
+    "filterCountry": "Filter Country",
+    "filterStatus": "Filter Status",
+    "allCountries": "All Countries",
+    "allStatuses": "All Statuses",
+    "totalCandidates": "Total Candidates",
+    "candidateName": "Candidate",
+    "country": "Origin Country",
+    "languages": "Languages",
+    "passport": "Passport Document",
+    "viewDocument": "View Passport",
+    "status": "Pipeline Status",
+    "actions": "Actions",
+    "approveBtn": "Approve & Email",
+    "approving": "Approving...",
+    "updateStatus": "Update Status",
+    "noCandidates": "No candidates found matching the selected filters.",
+    "appliedOn": "Applied On"
+  }
+}

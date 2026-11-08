@@ -1,0 +1,78 @@
+{
+  "nav": {
+    "agencyTitle": "Eejensii Imalaafi Qaxaraa Gaaloo",
+    "subTitle": "Poortaalii Qaxara Biyyoottan Alaa",
+    "apply": "Iyyannoo Hojii",
+    "admin": "Poortaalii Bulchaa",
+    "logout": "Bahi"
+  },
+  "hero": {
+    "badge": "Sirna Qaxara Alaa Si'ataa",
+    "title": "Qaxara Kallattii Dubaayiifi Biyyoota Galoo",
+    "description": "Iyyattoota Itoophiyaa, Yoordaanos, fi Saawudii Arabiyaa irraa kallattiin qaxartoota Dubaayiitti qabsiisa."
+  },
+  "form": {
+    "title": "Unka Iyyannoo Kaadhimamaa",
+    "subtitle": "Mee odeeffannoo dhuunfaa keessanii guutaa, paaspoortii keessan ol-fe'aa.",
+    "fullName": "Maqaa Guutuu (Akka Paaspoortiitti)",
+    "fullNamePlaceholder": "fkn: Aliyyii Mohammad",
+    "email": "Teessoo Imeeyilii",
+    "emailPlaceholder": "candidate@example.com",
+    "originCountry": "Biyya Dhalootaa / Jiraattan",
+    "selectCountry": "Biyya filadhaa",
+    "ethiopia": "Itoophiyaa",
+    "jordan": "Yoordaanos",
+    "saudiArabia": "Saawudii Arabiyaa",
+    "spokenLanguages": "Afaanota Dubbattan",
+    "spokenLanguagesHint": "Afaanota sirriitti dubbattan hunda filadhaa",
+    "passportFile": "Sanada Paaspoortii (PDF, JPG, PNG)",
+    "passportFileHint": "Hammamti guddaan 5MB. Qulqullina qabaachuu qaba.",
+    "dragDrop": "Sanada paaspoortii as tuqaa ykn harkisaa",
+    "fileSelected": "Faayila filatame",
+    "submit": "Iyyannoo Galchi",
+    "submitting": "Ol-fe'amaa jira...",
+    "successTitle": "Iyyannoon Keessan Milkaa'inaan Galmeeffameera!",
+    "successMessage": "Odeeffannoonfi paaspoortiin keessan kuufamee gamaaggamaaf darbeera. Yeroo mirkanaa'u imeeyiliin isiniif ergama.",
+    "submitAnother": "Iyyannoo Biraa Galchi"
+  },
+  "languages": {
+    "afaanOromo": "Afaan Oromoo",
+    "amharic": "Amaariffa",
+    "english": "Ingiliffa",
+    "arabic": "Arabiiffa"
+  },
+  "statuses": {
+    "Pending": "Eeggachaa",
+    "Screened": "Gamaaggamame",
+    "Approved": "Mirkanaa'e",
+    "Visa Processing": "Viizaa Adeemsarra",
+    "Placed": "Qaxarame"
+  },
+  "admin": {
+    "loginTitle": "Seensa Bulchaa Eejensii",
+    "loginSubtitle": "Adeemsa qaxaraa to'achuuf seeni",
+    "username": "Maqaa Fayyadamaa / Imeeyilii",
+    "password": "Jecha Darbii",
+    "signIn": "Seeni",
+    "signingIn": "Mirkaneessaa jira...",
+    "dashboardTitle": "Gabaasa Hojii Qaxaraa",
+    "dashboardSubtitle": "Iyyattoota idil-addunyaa calalaa fi mirkaneessaa",
+    "filterCountry": "Biyyaan Calali",
+    "filterStatus": "Sadarkaan Calali",
+    "allCountries": "Biyyoota Hunda",
+    "allStatuses": "Sadarkaalee Hunda",
+    "totalCandidates": "Waliigala Iyyattoota",
+    "candidateName": "Iyyataa",
+    "country": "Biyya",
+    "languages": "Afaanota",
+    "passport": "Paaspoortii",
+    "viewDocument": "Paaspoortii Ilaali",
+    "status": "Sadarkaa Qaxaraa",
+    "actions": "Tarkaanfiiwwan",
+    "approveBtn": "Mirkaneessi & Imeeyilii Ergi",
+    "approving": "Mirkaneessaa jira...",
+    "updateStatus": "Sadarkaa Jijjiiri",
+    "noCandidates": "Iyyataan filannoo kana fakkaatu hin argamne.",
+    "appliedOn": "Guyyaa Iyyatame"
+  }
+}

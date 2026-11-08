@@ -1,0 +1,78 @@
+{
+  "nav": {
+    "agencyTitle": "ጋሎ የጉዞ እና የቅጥር ኤጀንሲ",
+    "subTitle": "አለምአቀፍ የቅጥር ፖርታል",
+    "apply": "የስራ ማመልከቻ",
+    "admin": "የአስተዳዳሪ ፖርታል",
+    "logout": "ውጣ"
+  },
+  "hero": {
+    "badge": "ቀጥታ እና ፈጣን አለምአቀፍ ቅጥር",
+    "title": "ወደ ዱባይ እና የባህረ ሰላጤው አገራት ቀጥታ ቅጥር",
+    "description": "ከኢትዮጵያ፣ ዮርዳኖስ እና ሳውዲ አረቢያ የተውጣጡ ብቁ አመልካቾችን በዱባይ ካሉ አሰሪዎች ጋር በቀጥታ ያገናኛል።"
+  },
+  "form": {
+    "title": "የዕጩ አመልካች ቅጽ",
+    "subtitle": "እባክዎ ትክክለኛ የግል መረጃዎን ይሙሉ እና የፓስፖርት ፎቶ ወይም ፒዲኤፍ ያስገቡ።",
+    "fullName": "ሙሉ ስም (እንደ ፓስፖርቱ)",
+    "fullNamePlaceholder": "ለምሳሌ፡ አበበ ቢቂላ",
+    "email": "ኢሜይል አድራሻ",
+    "emailPlaceholder": "candidate@example.com",
+    "originCountry": "የትውልድ / ነዋሪነት አገር",
+    "selectCountry": "አገር ይምረጡ",
+    "ethiopia": "ኢትዮጵያ",
+    "jordan": "ዮርዳኖስ",
+    "saudiArabia": "ሳውዲ አረቢያ",
+    "spokenLanguages": "የሚናገሯቸው ቋንቋዎች",
+    "spokenLanguagesHint": "በደንብ የሚናገሯቸውን ቋንቋዎች በሙሉ ይምረጡ",
+    "passportFile": "የፓስፖርት ሰነድ (PDF, JPG, PNG)",
+    "passportFileHint": "ከፍተኛው መጠን 5 ሜጋባይት (5MB)። ግልጽና የሚነበብ መሆን አለበት።",
+    "dragDrop": "የፓስፖርት ሰነድ እዚህ ይጫኑ ወይም ይጎትቱ",
+    "fileSelected": "የተመረጠው ፋይል",
+    "submit": "ማመልከቻውን አስገባ",
+    "submitting": "ፋይሉ በመጫን ላይ ነው...",
+    "successTitle": "ማመልከቻዎ በተሳካ ሁኔታ ገብቷል!",
+    "successMessage": "የእርስዎ መረጃ እና ፓስፖርት ተልኳል። ማመልከቻዎ ሲገመገም በኢሜይል እናሳውቅዎታለን።",
+    "submitAnother": "ሌላ ማመልከቻ አስገባ"
+  },
+  "languages": {
+    "afaanOromo": "አፋን ኦሮሞ",
+    "amharic": "አማርኛ",
+    "english": "እንግሊዝኛ",
+    "arabic": "አረብኛ"
+  },
+  "statuses": {
+    "Pending": "በመጠባበቅ ላይ",
+    "Screened": "የተጣራ",
+    "Approved": "የጸደቀ",
+    "Visa Processing": "ቪዛ በሂደት ላይ",
+    "Placed": "የተቀጠረ"
+  },
+  "admin": {
+    "loginTitle": "የኤጀንሲ አስተዳዳሪ መግቢያ",
+    "loginSubtitle": "አመልካቾችን ለመቆጣጠር እና ሰነዶችን ለመገምገም ይግቡ",
+    "username": "የተጠቃሚ ስም / ኢሜይል",
+    "password": "የይለፍ ቃል",
+    "signIn": "ግባ",
+    "signingIn": "በማረጋገጥ ላይ...",
+    "dashboardTitle": "የቅጥር ስራዎች ዳሽቦርድ",
+    "dashboardSubtitle": "አለምአቀፍ አመልካቾችን ያጣሩ እና ያጽድቁ",
+    "filterCountry": "በአገር አጣራ",
+    "filterStatus": "በሁኔታ አጣራ",
+    "allCountries": "ሁሉም አገራት",
+    "allStatuses": "ሁሉም ሁኔታዎች",
+    "totalCandidates": "ጠቅላላ አመልካቾች",
+    "candidateName": "አመልካች",
+    "country": "አገር",
+    "languages": "ቋንቋዎች",
+    "passport": "ፓስፖርት",
+    "viewDocument": "ፓስፖርት ይመልከቱ",
+    "status": "የቅጥር ደረጃ",
+    "actions": "እርምጃዎች",
+    "approveBtn": "አጽድቅ እና ኢሜይል ላክ",
+    "approving": "በማጽደቅ ላይ...",
+    "updateStatus": "ደረጃ ቀይር",
+    "noCandidates": "በዚህ መስፈርት የተገኘ አመልካች የለም።",
+    "appliedOn": "የቀረበበት ቀን"
+  }
+}
