@@ -12,40 +12,21 @@ const app = express();
 // Database Connection
 connectDB();
 
-// CORS Configuration
-const allowedOrigins = [
-  process.env.FRONTEND_URL,
-  'https://agency-portal.vercel.app',
-  'http://localhost:5173',
-  'http://localhost:3000',
-  'http://127.0.0.1:5173'
-].filter(Boolean);
-
+// CORS Configuration - Permissive for Vercel deployment with OPTIONS preflight handling
 app.use(cors({
-  origin: (origin, callback) => {
-    // Allow requests with no origin (like mobile apps, Postman, curl, or serverless internal invocations)
-    if (!origin) return callback(null, true);
-    if (
-      allowedOrigins.indexOf(origin) !== -1 ||
-      origin.endsWith('.vercel.app') ||
-      process.env.NODE_ENV !== 'production'
-    ) {
-      return callback(null, true);
-    }
-    // Permissive fallback in production deployment
-    return callback(null, true);
-  },
+  origin: true,
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  allowedHeaders: ['Content-Type', 'Authorization', 'Accept']
 }));
+app.options('*', cors());
 
 // Body Parsers
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Health Check Endpoint
-app.get('/api/health', (req, res) => {
+app.get(['/api/health', '/health'], (req, res) => {
   res.status(200).json({
     status: 'healthy',
     timestamp: new Date().toISOString(),
@@ -53,17 +34,23 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-// Mount Routes
+// Mount Routes (handles both with and without /api prefix for Vercel serverless)
 app.use('/api/candidates', candidateRoutes);
+app.use('/candidates', candidateRoutes);
+
 app.use('/api/auth', authRoutes);
+app.use('/auth', authRoutes);
 
 // Serve static frontend when deployed unified (single-port / production mode)
+const rootDist = path.join(__dirname, '../dist');
 const frontendDist = path.join(__dirname, '../frontend/dist');
-if (fs.existsSync(frontendDist)) {
-  app.use(express.static(frontendDist));
+const targetDist = fs.existsSync(rootDist) ? rootDist : frontendDist;
+
+if (fs.existsSync(targetDist)) {
+  app.use(express.static(targetDist));
   app.get('*', (req, res, next) => {
-    if (req.path.startsWith('/api')) return next();
-    res.sendFile(path.join(frontendDist, 'index.html'));
+    if (req.path.startsWith('/api') || req.path.startsWith('/candidates') || req.path.startsWith('/auth')) return next();
+    res.sendFile(path.join(targetDist, 'index.html'));
   });
 }
 
