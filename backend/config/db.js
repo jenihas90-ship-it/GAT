@@ -3,8 +3,13 @@ const mongoose = require('mongoose');
 let mongodInstance = null;
 
 const connectDB = async () => {
+  // Cache connection in serverless (e.g. Vercel) environments
+  if (mongoose.connection.readyState >= 1) {
+    return;
+  }
+
   try {
-    let mongoUri = process.env.MONGO_URI;
+    let mongoUri = process.env.MONGO_URI || process.env.MONGODB_URI;
 
     if (!mongoUri) {
       console.log('ℹ️ No MONGO_URI provided in environment. Initializing in-memory MongoDB for local testing...');

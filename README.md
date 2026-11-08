@@ -147,16 +147,34 @@ Supported locales:
 
 ---
 
-## ☁️ Vercel Deployment
+## ☁️ Unified Full-Stack Vercel Deployment (Frontend & Backend on One)
 
-1. **Backend Deployment**:
-   - Set Root Directory to `backend/`.
-   - Configure Environment Variables in Vercel Dashboard:
-     - `MONGO_URI`
-     - `JWT_SECRET`
-     - `CLOUDINARY_URL`
-     - `GMAIL_APP_PASSWORD`
-     - `FRONTEND_URL` (points to your deployed frontend domain).
-2. **Frontend Deployment**:
-   - Set Root Directory to `frontend/`.
-   - Set `VITE_API_URL` to your deployed backend URL (e.g. `https://api.galotravel.com/api` or `/api` via rewrite).
+Both the **React Frontend** and the **Express REST API** are configured to deploy together as a **single unified project** in Vercel using the root `vercel.json` and `api/` serverless gateway:
+
+1. In the **Vercel Dashboard**, click **Add New... ➔ Project** and import:
+   👉 `https://github.com/jenihas90-ship-it/GAT.git`
+2. **Root Directory:** Leave as `./` (default). **Do NOT select `frontend` or `backend`**.
+3. **Build & Output Settings:** Vercel automatically detects the root `vercel.json`:
+   - Frontend builds to `frontend/dist` and handles client routes.
+   - All `/api/*` endpoints are handled by the serverless Express backend (`api/index.js`).
+4. **Environment Variables** (Add in Vercel Project Settings):
+   - `MONGO_URI`: Your MongoDB connection string.
+   - `JWT_SECRET`: Secret key for admin authentication.
+   - `CLOUDINARY_CLOUD_NAME`, `CLOUDINARY_API_KEY`, `CLOUDINARY_API_SECRET`: Cloudinary credentials for passport document uploads.
+   - `SMTP_USER`, `SMTP_PASS`: Email credentials for candidate approval notifications.
+
+---
+
+## 💻 Standalone / Single-Server Deployment (Render, Railway, or VPS)
+You can also run both frontend and backend on a single port using Node.js:
+```bash
+# 1. Install all dependencies
+npm run install:all
+
+# 2. Build the production React frontend
+npm run build
+
+# 3. Launch the unified full-stack server
+npm start
+# App is live on http://localhost:5000 (serving both API & Frontend)
+```

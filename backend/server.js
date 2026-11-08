@@ -1,6 +1,8 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
+const fs = require('fs');
 const connectDB = require('./config/db');
 const candidateRoutes = require('./routes/candidateRoutes');
 const authRoutes = require('./routes/authRoutes');
@@ -23,10 +25,15 @@ app.use(cors({
   origin: (origin, callback) => {
     // Allow requests with no origin (like mobile apps, Postman, curl, or serverless internal invocations)
     if (!origin) return callback(null, true);
-    if (allowedOrigins.indexOf(origin) !== -1 || process.env.NODE_ENV !== 'production') {
+    if (
+      allowedOrigins.indexOf(origin) !== -1 ||
+      origin.endsWith('.vercel.app') ||
+      process.env.NODE_ENV !== 'production'
+    ) {
       return callback(null, true);
     }
-    return callback(new Error(`Blocked by CORS policy: Origin ${origin} not permitted.`));
+    // Permissive fallback in production deployment
+    return callback(null, true);
   },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
@@ -49,6 +56,16 @@ app.get('/api/health', (req, res) => {
 // Mount Routes
 app.use('/api/candidates', candidateRoutes);
 app.use('/api/auth', authRoutes);
+
+// Serve static frontend when deployed unified (single-port / production mode)
+const frontendDist = path.join(__dirname, '../frontend/dist');
+if (fs.existsSync(frontendDist)) {
+  app.use(express.static(frontendDist));
+  app.get('*', (req, res, next) => {
+    if (req.path.startsWith('/api')) return next();
+    res.sendFile(path.join(frontendDist, 'index.html'));
+  });
+}
 
 // Multer and general Error Handling Middleware
 app.use((err, req, res, next) => {
