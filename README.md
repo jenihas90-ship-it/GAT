@@ -21,55 +21,31 @@ This platform replaces manual WhatsApp-based recruitment operations with an auto
 
 ---
 
-## 📁 Repository Structure
+## 📁 Unified Repository Structure
 
 ```text
 Galo Travel Agency/
+├── api/
+│   ├── index.js                  # Vercel serverless API gateway
+│   └── [...all].js               # Catch-all API serverless handler
 ├── backend/
-│   ├── config/
-│   │   ├── db.js                 # MongoDB connection logic
-│   │   └── cloudinary.js         # Cloudinary configuration & buffer streaming
-│   ├── controllers/
-│   │   ├── authController.js     # Admin login & JWT generation
-│   │   └── candidateController.js# Apply, query with filters, approve & email
-│   ├── middleware/
-│   │   ├── auth.js               # JWT verification middleware
-│   │   └── upload.js             # Multer memory storage (5MB file limit)
-│   ├── models/
-│   │   ├── Candidate.js          # MongoDB Candidate schema
-│   │   └── User.js               # Admin credentials schema
-│   ├── routes/
-│   │   ├── authRoutes.js         # /api/auth/login
-│   │   └── candidateRoutes.js    # /api/candidates
-│   ├── services/
-│   │   └── emailService.js       # Asynchronous Nodemailer SMTP dispatcher
-│   ├── .env.example              # Template for environment configuration
-│   ├── package.json
-│   ├── server.js                 # Express server & CORS configuration
-│   └── vercel.json               # Vercel serverless deployment config
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── CandidateForm.jsx # Public multi-lingual application form
-│   │   │   ├── AdminDashboard.jsx# Candidate filter table & approval actions
-│   │   │   ├── AdminLogin.jsx    # Admin login modal
-│   │   │   └── LanguageSwitcher.jsx
-│   │   ├── locales/
-│   │   │   ├── en.json           # English dictionary
-│   │   │   ├── am.json           # Amharic dictionary (አማርኛ)
-│   │   │   ├── om.json           # Afaan Oromo dictionary
-│   │   │   └── ar.json           # Arabic dictionary (العربية)
-│   │   ├── services/
-│   │   │   └── api.js            # Axios client with JWT interceptor
-│   │   ├── App.jsx               # Main layout + dynamic RTL hook
-│   │   ├── i18n.js               # react-i18next setup
-│   │   ├── index.css             # Responsive styling with RTL support
-│   │   └── main.jsx
-│   ├── package.json
-│   ├── vite.config.js
-│   └── vercel.json
-├── package.json
-└── README.md
+│   ├── config/                   # MongoDB & Cloudinary configuration
+│   ├── controllers/              # Candidate & Auth controllers
+│   ├── middleware/               # JWT auth & Multer memory storage
+│   ├── models/                   # Candidate & User schemas
+│   ├── routes/                   # candidateRoutes & authRoutes
+│   ├── services/                 # EmailService (SMTP Nodemailer)
+│   └── server.js                 # Express server & CORS configuration
+├── src/                          # React Frontend Source Code
+│   ├── components/               # CandidateForm, AdminDashboard, AdminLogin
+│   ├── locales/                  # en, am, om, ar dictionaries
+│   ├── services/                 # Axios API service
+│   ├── App.jsx
+│   └── main.jsx
+├── index.html                    # Root HTML
+├── vite.config.js                # Root Vite Configuration
+├── vercel.json                   # Root Vercel Rewrites Configuration
+└── package.json                  # Unified Single Package.json
 ```
 
 ---

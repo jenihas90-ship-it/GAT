@@ -1,37 +1,35 @@
 {
-  "name": "cross-border-agency-management-system",
+  "name": "galo-travel-agency",
   "version": "1.0.0",
-  "description": "International Recruitment Portal for Galo Travel Agency",
+  "description": "Cross-Border Agency Management System - Galo Travel Agency",
   "main": "backend/server.js",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "start": "node backend/server.js",
-    "build": "cd frontend && npm install && npm run build",
-    "install:all": "npm install && npm --prefix backend install && npm --prefix frontend install",
-    "dev:backend": "npm --prefix backend run dev",
-    "dev:frontend": "npm --prefix frontend run dev",
-    "build:frontend": "npm --prefix frontend run build"
+    "dev:backend": "node --watch backend/server.js"
   },
-  "keywords": [
-    "recruitment",
-    "ethiopia",
-    "jordan",
-    "saudi-arabia",
-    "dubai",
-    "react",
-    "express",
-    "mongodb"
-  ],
-  "author": "Galo Travel Agency",
-  "license": "ISC",
   "dependencies": {
+    "axios": "^1.6.8",
     "bcryptjs": "^2.4.3",
     "cloudinary": "^2.1.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "i18next": "^23.11.2",
+    "i18next-browser-languagedetector": "^7.2.1",
     "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.372.0",
     "mongoose": "^8.3.1",
     "multer": "^1.4.5-lts.1",
-    "nodemailer": "^6.9.13"
+    "nodemailer": "^6.9.13",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^14.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.2.8"
   }
 }
